@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiTrading - AI-трейдинг</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Экран загрузки -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="AiTrading Logo" class="logo" id="appLogo">
+            <h1 class="loading-title">AiTrading</h1>
+            <p class="loading-subtitle">AI-Powered Trading Platform</p>
+        </div>
+        
+        <div class="loading-bar-container">
+            <div class="loading-bar" id="loadingBar"></div>
+        </div>
+        
+        <div class="loading-text" id="loadingText">
+            Инициализация системы...
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="app-content" id="appContent">
+        <div class="container">
+            <header class="header">
+                <div class="logo-header">
+                    <img src="images/logo.png" alt="AiTrading Logo" class="logo-small">
+                    <h1 class="app-title">AiTrading</h1>
+                </div>
+                <p class="app-subtitle">Мощная AI-платформа для автоматической торговли на финансовых рынках</p>
+            </header>
+
+            <main class="main-content">
+                <!-- Форма регистрации -->
+                <div class="registration-form" id="registrationForm">
+                    <h2 class="form-title">Регистрация в AiTrading</h2>
+                    <p class="form-description">
+                        Присоединяйтесь к нашей платформе AI-трейдинга. Подключите свой Telegram для получения торговых сигналов и управления аккаунтом.
+                    </p>
+                    
+                    <div class="form-group">
+                        <label for="userName" class="form-label">Имя пользователя</label>
+                        <input type="text" id="userName" class="form-input" placeholder="Введите ваше имя">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="userEmail" class="form-label">Email адрес</label>
+                        <input type="email" id="userEmail" class="form-input" placeholder="example@mail.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Способ подключения</label>
+                        <div class="connection-options">
+                            <div class="connection-option active" id="telegramOption">
+                                <div class="option-icon">
+                                    <i class="fab fa-telegram"></i>
+                                </div>
+                                <div class="option-info">
+                                    <h3>Telegram</h3>
+                                    <p>Получайте сигналы и управляйте аккаунтом через Telegram</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group telegram-connection" id="telegramConnection">
+                        <div class="telegram-info">
+                            <p>Для подключения через Telegram:</p>
+                            <ol class="telegram-steps">
+                                <li>Нажмите кнопку ниже</li>
+                                <li>Авторизуйтесь в Telegram</li>
+                                <li>Разрешите доступ к вашему аккаунту</li>
+                                <li>Начните получать торговые сигналы</li>
+                            </ol>
+                        </div>
+                        
+                        <button class="btn btn-telegram" id="connectTelegramBtn">
+                            <i class="fab fa-telegram"></i> Подключиться через Telegram
+                        </button>
+                        
+                        <p class="telegram-note">
+                            После подключения вы сможете получать торговые сигналы и управлять настройками через Telegram бота.
+                        </p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" id="completeRegistrationBtn" disabled>
+                            Завершить регистрацию
+                        </button>
+                    </div>
+                    
+                    <div class="form-footer">
+                        <p>Уже есть аккаунт? <a href="#" id="loginLink">Войти</a></p>
+                    </div>
+                </div>
+                
+                <!-- Информация о платформе -->
+                <div class="platform-info">
+                    <h3>Преимущества AiTrading</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h4>AI Анализ</h4>
+                            <p>Мощные алгоритмы искусственного интеллекта для анализа рынка</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h4>Мгновенные сигналы</h4>
+                            <p>Получайте торговые сигналы в реальном времени</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4>Безопасность</h4>
+                            <p>Защита данных и транзакций на высшем уровне</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+            <footer class="footer">
+                <p>© 2023 AiTrading Platform. Все права защищены.</p>
+                <p class="footer-links">
+                    <a href="#">Политика конфиденциальности</a> | 
+                    <a href="#">Условия использования</a> | 
+                    <a href="#">Поддержка</a>
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
